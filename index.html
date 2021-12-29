@@ -168,41 +168,6 @@
 
 
 
-    <!--  IMAGE SLIDER   -->
-    <div id="details" class="basic-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-container">
-                        <h2>WE HAVE THE IDEAS</h2>
-                        <p>We love to connect and manage complex business solutions systems for small and medium sized
-                            companies globally. Partnerships represent a key pillar of our development strategy. We
-                            invest important resources to preserve them for the management long run because we truly
-                            believe in win-win collaborations.</p>
-                        <p>Our team is our core strength. We rely on each other's skills and experience to delivery huge
-                            value and impressive results to our most loyal customers.</p>
-                    </div> <!-- end of text-container -->
-                    <div class="image-container">
-                        <div id="js-rotating-images">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li>
-                                        <img class="img-fluid" src="images/slot_multidisplay_1.jpg" alt="alternative">
-                                    </li>
-                                    <li>
-                                        <img class="img-fluid" src="images/slot_multidisplay_2.jpg" alt="alternative">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div>
-    <!-- end of IMAGE SLIDER -->
-
-
 
 
     <div id="details" class="basic-2" style="background-color: #111111;">
@@ -217,6 +182,9 @@
                             <img src="https://pyramidasialtd.com/images/slot_multidisplay_2.jpg">
                             <img src="https://pyramidasialtd.com/images/slot_single_1.jpg">
                             <img src="https://pyramidasialtd.com/images/slot_single_2.jpg">
+                            <img src="https://pyramidasialtd.com/images/table_games_1.jpg">
+                            <img src="https://pyramidasialtd.com/images/table_games_2.jpg">
+                            <img src="https://pyramidasialtd.com/imagestable_games_multiple.jpg">
                         </div>
 
                         <!-- <a class="btn-solid-reg" href="#your-link">DETAILS</a> -->
@@ -225,6 +193,31 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div>
+
+
+
+
+    <div id="details" class="basic-2" style="background-color: #111111;">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="text-container">
+                        <h2 style="color: white; ">OUR GAMES AND OTHER SOFTWARE</h2>
+
+                        <div class="games-software-carousel owl-theme">
+                            <img src="https://pyramidasialtd.com/images/games1/img1.png">
+                            <img src="https://pyramidasialtd.com/images/games1/img3.png">
+                            <img src="https://pyramidasialtd.com/images/games1/img5.png">
+                            <img src="https://pyramidasialtd.com/images/games1/img6.png">
+                        </div>
+
+                        <!-- <a class="btn-solid-reg" href="#your-link">DETAILS</a> -->
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div>
+
 
 
 
@@ -427,9 +420,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            $('.owl-carousel').owlCarousel({
+            let carouselConfig = {
                 loop: true,
                 margin: 10,
+                autoplay: false,
+                autoplayTimeout: 700,
+                autoplayHoverPause: false,
                 nav: true,
                 responsive: {
                     0: {
@@ -442,8 +438,10 @@
                         items: 5
                     }
                 }
-            })
+            }
 
+            $('.owl-carousel').owlCarousel(carouselConfig)
+            $('.games-software-carousel').owlCarousel(carouselConfig)
         });
     </script>
 </body>

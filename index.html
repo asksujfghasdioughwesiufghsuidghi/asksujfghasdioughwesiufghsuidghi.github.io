@@ -441,7 +441,7 @@
             }
 
             $('.owl-carousel').owlCarousel(carouselConfig)
-            $('.games-software-carousel').owlCarousel(carouselConfig)
+            $('.games-software-carousel').owlCarousel({ ...carouselConfig, responsive: false })
         });
     </script>
 </body>

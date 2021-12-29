@@ -28,8 +28,8 @@
     <link href="css/swiper.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
-    <link href="css/morphist.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+	<link href="css/splide-core.min.css" rel="stylesheet">
+    <link href="css/splide.min.css" rel="stylesheet">
 	
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
@@ -360,20 +360,13 @@
     <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
-    <script src="js/morphist.js"></script> <!-- Morphist rotating objects -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/js/splide.cjs.min.js"></script>
     <script>
-        $("#js-rotating-images").Morphist({
-            // The entrance animation type (In).
-            animateIn: "tada",
-            // The exit animation type (Out). Refer to Animate.css for a list of available animations.
-            // animateOut: "bounceOut",
-            // The delay between the changing of each object in milliseconds.
-            speed: 2000,
-            complete: function () {
-                // Called after the entrance animation is executed.
-            }
-        });
+        document.addEventListener( 'DOMContentLoaded', function() {
+          var splide = new Splide( '#js-rotating-images' );
+          splide.mount();
+        } );
     </script>
 </body>
 </html>

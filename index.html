@@ -28,6 +28,7 @@
     <link href="css/swiper.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
+    <link href="css/morphist.css" rel="stylesheet">
 	
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
@@ -149,6 +150,30 @@
         </div> <!-- end of container -->
     </div> <!-- end of basic-1 -->
     <!-- end of services -->
+
+
+    <!--  IMAGE SLIDER   -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-container">
+                    <h2>WE HAVE THE IDEAS</h2>
+                    <p>We love to connect and manage complex business solutions systems for small and medium sized companies globally. Partnerships represent a key pillar of our development strategy. We invest important resources to preserve them for the management long run because we truly believe in win-win collaborations.</p>
+                    <p>Our team is our core strength. We rely on each other's skills and experience to delivery huge value and impressive results to our most loyal customers.</p>
+                    <!-- <a class="btn-solid-reg" href="#your-link">DETAILS</a> -->
+                    <a class="btn-outline-reg page-scroll" href="#contact">CONTACT</a>
+                </div> <!-- end of text-container -->
+                <div class="image-container">
+                    <ul id="js-rotating-images">
+                        <img class="img-fluid" src="images/slot_multidisplay_1.jpg" alt="alternative">
+                        <img class="img-fluid" src="images/slot_multidisplay_2.jpg" alt="alternative">
+                    </ul>
+                </div> <!-- end of image-container -->
+            </div> <!-- end of col -->
+           
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+    <!-- end of IMAGE SLIDER -->
 
 
     <!-- Details 1 -->
@@ -328,6 +353,20 @@
     <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="js/morphist.js"></script> <!-- Morphist rotating objects -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script>
+        $("#js-rotating-images").Morphist({
+            // The entrance animation type (In).
+            animateIn: "tada",
+            // The exit animation type (Out). Refer to Animate.css for a list of available animations.
+            animateOut: "bounceOut",
+            // The delay between the changing of each object in milliseconds.
+            speed: 2000,
+            complete: function () {
+                // Called after the entrance animation is executed.
+            }
+        });
+    </script>
 </body>
 </html>
